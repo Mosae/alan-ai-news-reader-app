@@ -17,7 +17,7 @@ const App = () => {
 	}, []);
 	return (
 		<div>
-			<h1>Alan AI News Application by Mosae</h1>
+			<h1>Alan AI News Application by Mosae-Litsoane</h1>
 		</div>
 	);
 };
