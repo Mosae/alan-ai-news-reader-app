@@ -28,7 +28,7 @@ const infoCards = [
 ];
 const NewsCards = ({ articles }) => {
 	const classes = useStyles();
-	if (!articles.lentgh) {
+	if (!articles.length) {
 		return (
 			<Grow in>
 				<Grid
