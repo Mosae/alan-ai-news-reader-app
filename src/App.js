@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import alanBtn from '@alan-ai/alan-sdk-web';
 import NewsCards from './components/NewsCards/NewsCards';
+import classes from '*.module.css';
 const App = () => {
 	const [newsArticles, setNewsArticles] = useState([]);
 	//useEffect to render on component did mount
@@ -19,7 +20,13 @@ const App = () => {
 	}, []);
 	return (
 		<div>
-			<h1>Alan AI News Application by Mosae-Litsoane</h1>
+			<div className={classes.logoContainer}>
+				<img
+					src="https://alan.app/voice/images/previews/preview.jpg"
+					className={classes.alanLogo}
+					alt="logo"
+				/>
+			</div>
 			<NewsCards articles={newsArticles} />
 		</div>
 	);
