@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import alanBtn from '@alan-ai/alan-sdk-web';
 import NewsCards from './components/NewsCards/NewsCards';
-import classes from '*.module.css';
+import useStyles from './styles.js';
 const App = () => {
 	const [newsArticles, setNewsArticles] = useState([]);
+	const classes = useStyles();
 	//useEffect to render on component did mount
 	const alanKey =
 		'1d1eaf053ee87ab05f29ec21509c3ac02e956eca572e1d8b807a3e2338fdd0dc/stage';
