@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import alanBtn from '@alan-ai/alan-sdk-web';
 import NewsCards from './components/NewsCards/NewsCards';
 import useStyles from './styles.js';
+import Footer from './components/Footer/Footer';
 const App = () => {
 	const [newsArticles, setNewsArticles] = useState([]);
 	const classes = useStyles();
@@ -29,6 +30,7 @@ const App = () => {
 				/>
 			</div>
 			<NewsCards articles={newsArticles} />
+			<Footer />
 		</div>
 	);
 };
