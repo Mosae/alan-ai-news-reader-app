@@ -4,6 +4,7 @@ import NewsCards from './components/NewsCards/NewsCards';
 import useStyles from './styles.js';
 import wordsToNumbers from 'words-to-numbers';
 import Footer from './components/Footer/Footer';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const App = () => {
 	const [newsArticles, setNewsArticles] = useState([]);
 	const [activeArticle, setActiveArticle] = useState(-1);
@@ -47,6 +48,7 @@ const App = () => {
 			</div>
 			<NewsCards articles={newsArticles} activeArticle={activeArticle} />
 			<Footer />
+			<FontAwesomeIcon icon={['fab', 'apple']} />
 		</div>
 	);
 };
