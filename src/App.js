@@ -5,6 +5,7 @@ import useStyles from './styles.js';
 import Footer from './components/Footer/Footer';
 const App = () => {
 	const [newsArticles, setNewsArticles] = useState([]);
+	const [activeArticle, setActiveArticle] = useState(-1);
 	const classes = useStyles();
 	//useEffect to render on component did mount
 	const alanKey =
@@ -15,7 +16,9 @@ const App = () => {
 			onCommand: ({ command, articles }) => {
 				if (command === 'newHeadlines') {
 					setNewsArticles(articles);
-					console.log(articles);
+					setActiveArticle(-1);
+				} else if (command === 'highlight') {
+					setActiveArticle((prevActiveArticle) => prevActiveArticle + 1);
 				}
 			},
 		});
@@ -29,7 +32,7 @@ const App = () => {
 					alt="logo"
 				/>
 			</div>
-			<NewsCards articles={newsArticles} />
+			<NewsCards articles={newsArticles} activeArticle={activeArticle} />
 			<Footer />
 		</div>
 	);
