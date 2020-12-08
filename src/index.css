@@ -6,7 +6,7 @@ body {
 
 body {
 	margin: 0;
-	background-color: bisque;
+	background-image: linear-gradient(to right, #1ac89b, #606cf2);
 }
 
 * {
