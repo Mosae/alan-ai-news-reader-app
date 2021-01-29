@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import alanBtn from '@alan-ai/alan-sdk-web';
+import logo from './images/alan-logo-horizontal-color.png';
 import NewsCards from './components/NewsCards/NewsCards';
 import useStyles from './styles.js';
 import wordsToNumbers from 'words-to-numbers';
@@ -39,11 +40,7 @@ const App = () => {
 	return (
 		<div>
 			<div className={classes.logoContainer}>
-				<img
-					src="https://alan.app/voice/images/previews/preview.jpg"
-					className={classes.alanLogo}
-					alt="logo"
-				/>
+				<img src={logo} className={classes.alanLogo} alt="Alan logo" />
 			</div>
 			<NewsCards articles={newsArticles} activeArticle={activeArticle} />
 			<Footer />
